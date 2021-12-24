@@ -1,0 +1,48 @@
+body{
+    background-color: #000;
+}
+
+#root{
+    margin-left: 470px;
+    margin-top: 200px;
+}
+
+.cronometroBox{
+    padding: 0px 0px 10px 60px;
+}
+
+.cronometroBox span{
+    color: #fff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3.9em;
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    margin: 10px;
+    padding:8px 0px 8px 0px;
+    width: 70px;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+.ButtonsBox .boton .btn-beg{
+    background-color: #24D322;
+}   
+
+.ButtonsBox .boton .btn-pause{
+    background-color: #2CAEE7;
+}   
+
+.ButtonsBox .boton .btn-res{
+    background-color: #8F2CE7;
+}   
+
+.ButtonsBox .boton .btn-reset{
+    background-color: #E65129;
+}   
