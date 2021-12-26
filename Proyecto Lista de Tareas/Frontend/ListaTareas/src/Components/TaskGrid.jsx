@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import img1 from '../Img/delete.png';
 import img2 from '../Img/editar-texto.png';
 import { editTask } from '../Services/TasksServices';
@@ -75,3 +76,10 @@ const TaskGrid = ({id, detalles, realizada, setTasks}) => {
     )
 }
 export default TaskGrid
+
+TaskGrid.propTypes = {
+    id: PropTypes.number.isRequired,
+    detalles: PropTypes.string.isRequired,
+    realizada: PropTypes.bool.isRequired,
+    setTasks: PropTypes.func.isRequired
+}
