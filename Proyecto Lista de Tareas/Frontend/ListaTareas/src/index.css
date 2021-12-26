@@ -14,17 +14,12 @@ body{
     width: 100%;
 }
 
-/* .form{
-    position: fixed;
-    z-index: 1;
-} */
-
 .form-task{
     background-color: #DE3A3A;
 }
 
 .input-task {
-    width: 70%;
+    width: 80%;
     font-size: 1.2rem;
     padding: 10px;
     border: none;
@@ -40,7 +35,7 @@ input[type ='button']{
     background-color: rgba(0,0,0,0.2);
     border: none;
     font-size: 17px;
-    padding: 10px;
+    padding: 10px 20px 10px 20px;
     margin-left: 10px;
 }
 
@@ -48,13 +43,13 @@ input[type='button']:hover{
     cursor:pointer;
 }
 
-input[type='button']:disabled{
-    background-color: #B97A7A;
-    cursor: default;
-}
-
 .input-task::placeholder{
     color:white;
+}
+
+h1{
+    text-align: center;
+    padding-top: 30px;
 }
 
 .cont-tasks{
@@ -117,7 +112,7 @@ input[type=checkbox]:checked + label:before {
     width: 80%;
 }
 
-button{
+.opciones{
     background-color: transparent;
     border: none;
     height: 20px;

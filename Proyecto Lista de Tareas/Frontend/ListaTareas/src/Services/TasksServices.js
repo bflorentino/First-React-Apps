@@ -1,4 +1,3 @@
-
 const url = 'https://localhost:44346/api/Tareas';
 
 export const getAllTasks = async() => {
@@ -6,24 +5,8 @@ export const getAllTasks = async() => {
     const res = await fetch(url);
     const { data } = await res.json();
 
-    const tasks = data.map(task => (
-        {
-            id:task.id,
-            details: task.detalles,
-            completed: task.realizada
-        }
-    ) 
-    )
-    return tasks;
+    return data;
 }
-
-// export const getTaskById = async( id ) => {
-    
-//     const res = await fetch(`${url}/${id}`);
-//     const { data } = await res.json();
-
-//     return data;
-// }
 
 export const editTask = async( id, detalles, realizada) => {
 
@@ -42,13 +25,7 @@ export const editTask = async( id, detalles, realizada) => {
     const res = await fetch(url,put);
     const { data } = await res.json();
     
-    const tasks = data.map(task => ({
-        id: task.id,
-        details: task.detalles,
-        completed: task.completed
-    }))
-
-    return tasks;
+    return data;
 
 }
 
@@ -57,7 +34,7 @@ export const addTask = async(  detalles ) => {
     const post = {
         method: 'POST',
         headers: {
-            'Content-type': 'application/json; charset=UTF-8' // Indicates the content 
+            'Content-type': 'application/json; charset=UTF-8' 
         },
         body: JSON.stringify({
             detalles:detalles
@@ -66,12 +43,18 @@ export const addTask = async(  detalles ) => {
 
     const res = await fetch(url, post);
     const { data } = await res.json();
-    
-    const tasks = data.map(task => ({
-        id: task.id,
-        details: task.detalles,
-        completed: task.completed
-    }))
 
-    return tasks;
+    return data;
+}
+
+export const deleteTask = async( id ) => {
+
+    const del = {
+        method: 'DELETE',
+    }
+
+    const res = await fetch(`${url}/${id}`, del);
+    const { data } = await res.json();
+    
+    return data;
 }

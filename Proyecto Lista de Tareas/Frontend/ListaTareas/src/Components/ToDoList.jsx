@@ -6,30 +6,28 @@ import { getAllTasks } from '../Services/TasksServices'
 const ToDoList = () => {
 
     const [tasks, setTasks] = useState([]);
-        // const [conteo, setConteo] = useState(0);
 
     useEffect(() => {
         getAllTasks().then( task => {
             setTasks([...task])
         })
     }, [])
-    // const {data:tareas, loading} = useFetchGetAllTasks(conteo);
 
     return (
         <>
             <div className='cont-todo-list'>
                 <AddTask setTasks= {setTasks} />
+                <h1>Lista de tareas</h1>
                 <ol className = 'cont-tasks'>
-                    {
-                        tasks.map(
-                            task =>(
-                            <TaskGrid
+                {
+                    tasks.map(task =>(
+                        <TaskGrid
                             key = {task.id}
                             {...task}
                             setTasks={setTasks}
-                            />
-                        ))
-                    }
+                        />
+                    ))
+                }
                 </ol>
             </div>
         </>
