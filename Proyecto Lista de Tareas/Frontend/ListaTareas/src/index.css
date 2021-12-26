@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background:  #FDFDFD;
+}
+
+#root{
+    width: 100%;
+}
+
+/* .form{
+    position: fixed;
+    z-index: 1;
+} */
+
+.form-task{
+    background-color: #DE3A3A;
+}
+
+.input-task {
+    width: 70%;
+    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    color:white;
+    margin: 30px 20px 20px 100px;
+}
+
+input[type ='button']{
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+    border: none;
+    font-size: 17px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+input[type='button']:hover{
+    cursor:pointer;
+}
+
+input[type='button']:disabled{
+    background-color: #B97A7A;
+    cursor: default;
+}
+
+.input-task::placeholder{
+    color:white;
+}
+
+.cont-tasks{
+    width: 60%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.task-items{
+    background-color: #DF5757;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#EDE6E6;
+}
+
+span{
+    display: inline-block;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+label{
+    position: relative;
+}
+
+label::before{
+    content: "";
+    display: inline-block;
+    border-radius: 24px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    position: absolute;
+    left: -40px;
+    top: -1px;
+    background-color: #fff;
+    border: 1px solid #7f152c;
+    box-sizing: border-box;
+}
+
+label::after{
+    right: 50px;
+}
+
+input[type=checkbox]:checked + label:before {
+    content: "\02714";
+    font-size: 20px;
+    color: #7f152c;
+    text-align: center;
+    line-height: 22px;
+}
+
+.checked-task{
+    margin-left: 44px;
+    width: 80%;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
+}
+
+button img{
+    height: 100%;
+    width: 100%;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.crud-btn{
+    margin-left: 10px;
+}

@@ -38,8 +38,8 @@ namespace ListaTareas
                                                                                             .AllowAnyMethod()
                                                                                             .AllowAnyHeader()));
 
-            services.AddSingleton<Entity.Lista_TareasContext>();
-            services.AddScoped<Services.ITareasServices, Services.TareasSerices>();
+            services.AddDbContext<Entity.Lista_TareasContext>();
+            services.AddScoped<Services.ITareasServices, Services.TareasServices>();
 
             // Configuration for automapper
             var mapperConfig = new MapperConfiguration(m =>

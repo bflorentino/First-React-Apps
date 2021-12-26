@@ -8,12 +8,12 @@ using System.Linq;
 
 namespace ListaTareas.Services
 {
-    public class TareasSerices:ITareasServices
+    public class TareasServices:ITareasServices
     {
         private readonly IMapper mapper;  
         private readonly Lista_TareasContext context;
 
-        public TareasSerices(IMapper mapper, Lista_TareasContext context)
+        public TareasServices(IMapper mapper, Lista_TareasContext context)
         {
             this.mapper = mapper;
             this.context = context;
@@ -44,7 +44,7 @@ namespace ListaTareas.Services
         {
             // Get all tasks from database
             ServerRes<List<TareaViewModel>> response = new();
-            var tasks = await context.Tareas.ToListAsync();
+            var tasks = await context.Tareas.OrderByDescending(x => x.Id).ToListAsync();
             response.Data = tasks.Select(t => mapper.Map<TareaViewModel>(t)).ToList();
             return response;
         }
