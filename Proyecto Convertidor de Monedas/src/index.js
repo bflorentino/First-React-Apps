@@ -3,4 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { getCurrenciesList, convertCurrencies } from './Services/CurrencyService';
 
-const value = convertCurrencies(100, "USD", "DOM").then(amount => amount);
+convertCurrencies(1000, 'USD', 'PHP')
+                                .then(total => {
+                                    console.log(total);
+                                });

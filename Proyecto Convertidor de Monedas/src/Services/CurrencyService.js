@@ -19,12 +19,14 @@ export const convertCurrencies = async(amount, fromCurrency, toCurrency) => {
     const result = await response.json();
 
     // Get price from JSON object 
-    const price = result[`${fromCurrency}_${toCurrency}`];
+    const price = await result[`${fromCurrency}_${toCurrency}`];
 
-    return (
-            {
-                price,
-                total: price * amount
-            }
-        )
+   const total = await price * amount;
+    return total;
+    //(
+    //         {
+    //             price,
+    //             total: price * amount
+    //         }
+    //     )
 }
