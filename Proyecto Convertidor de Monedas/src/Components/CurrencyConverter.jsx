@@ -46,7 +46,6 @@ const CurrencyConverter = () => {
 
             <div className='select-Currency'>
             <Input 
-                readonly={ false }
                 getAmount={(Amount) => amount = Amount} 
             />
             </div>
